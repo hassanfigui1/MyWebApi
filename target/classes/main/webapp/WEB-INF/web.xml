@@ -13,14 +13,22 @@
     <servlet-name>Jersey REST Service</servlet-name>
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
-        <param-name>jersey.config.server.provider.packages</param-name>
-        <param-value>net.codejava.ws</param-value>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>net.codejava.ws</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
-</servlet>
- 
-	<servlet-mapping>
-	    <servlet-name>Jersey REST Service</servlet-name>
-	    <url-pattern>/rest/*</url-pattern>
-	</servlet-mapping>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>CrosFilter</display-name>
+    <filter-name>CrosFilter</filter-name>
+    <filter-class>net.codejava.ws.CrosFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CrosFilter</filter-name>
+    <url-pattern>/rest/*</url-pattern>
+  </filter-mapping>
 </web-app>
