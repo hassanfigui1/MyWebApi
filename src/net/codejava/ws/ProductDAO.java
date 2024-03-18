@@ -8,8 +8,8 @@ public class ProductDAO {
     private static List<Product> data = new ArrayList<>();
 
     static {
-        data.add(new Product(1, "iPhone X", 999.99f));
-        data.add(new Product(2, "XBOX 360", 329.50f));
+        data.add(new Product(1, "iPhone X", 999.99f,"description blablabal"));
+        data.add(new Product(2, "XBOX 360", 329.50f,"description blablaba"));
     }
 
     private ProductDAO() {
@@ -60,4 +60,5 @@ public class ProductDAO {
         }
         return false;
     }
+    
 }
